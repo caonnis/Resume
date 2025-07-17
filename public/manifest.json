@@ -1,0 +1,21 @@
+{
+  "name": "Ariel Onnis - QA Engineer Portfolio",
+  "short_name": "Ariel Onnis",
+  "description": "Professional portfolio of Ariel Onnis - QA Engineer & CSM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#1f2937",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
