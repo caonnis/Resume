@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Linkedin, Phone, Github, Globe, Menu, CheckCircle, Clock } from "lucide-react"
+import { Mail, Linkedin, Phone, Github, Globe, Menu, CheckCircle, Clock, Download } from "lucide-react" // Added Download icon
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -35,8 +35,6 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Fixed Hamburger Menu for all screen sizes */}
       <div className="fixed top-4 left-4 z-50 print-hidden">
-        {" "}
-        {/* Changed from right-4 to left-4 */}
         <Sheet>
           <SheetTrigger asChild>
             <button
@@ -85,8 +83,6 @@ export default function Portfolio() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-4xl">
-        {/* No need for placeholder div as menu is always visible */}
-
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-200">{t.header.title}</h1>
@@ -122,6 +118,15 @@ export default function Portfolio() {
               <Github className="w-4 h-4" />
               <span className="text-sm sm:text-base">{t.socialLinks.github}</span>
             </a>
+            {/* CV Download Button */}
+            <a
+              href="/ariel-onnis-cv.pdf"
+              download="Ariel_Onnis_CV.pdf"
+              className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 sm:px-4 sm:py-2 rounded-lg transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              <span className="text-sm sm:text-base">{t.socialLinks.downloadCv}</span>
+            </a>
           </div>
         </div>
 
@@ -136,15 +141,30 @@ export default function Portfolio() {
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-3 sm:gap-0">
                       <div className="flex-1">
                         <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">{exp.title}</h3>
-                        <p className="text-gray-300 text-sm sm:text-base">{exp.company}</p>
+                        <p className="text-gray-300 text-sm sm:text-base">
+                          {exp.companyUrl ? (
+                            <a
+                              href={exp.companyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                            >
+                              {exp.company}
+                            </a>
+                          ) : (
+                            exp.company
+                          )}
+                        </p>
                         <p className="text-xs sm:text-sm text-gray-400">{exp.location}</p>
                         <p className="text-xs sm:text-sm text-gray-400">{exp.period}</p>
                       </div>
                       <div className="flex items-center gap-2 self-start">
                         {exp.status === "current" ? (
                           <>
-                            <Clock className="w-4 h-4 text-blue-400" />
-                            <span className="text-blue-400 text-xs sm:text-sm">{t.experienceDetails.current}</span>
+                            <Clock className="w-4 h-4 text-blue-400 animate-pulse-blink" />
+                            <span className="text-blue-400 text-xs sm:text-sm animate-pulse-blink">
+                              {t.experienceDetails.current}
+                            </span>
                           </>
                         ) : (
                           <>
@@ -168,10 +188,8 @@ export default function Portfolio() {
                         onValueChange={(value) => handleAccordionChange(index, value === "details")}
                       >
                         <AccordionItem value="details" className="border-none">
-                          <AccordionTrigger className="text-gray-500 hover:text-gray-300 text-xs py-1 justify-center hover:no-underline transition-colors duration-200">
-                            <span className="flex items-center gap-1">
-                              <span>{t.experienceDetails.moreDetails}</span>
-                            </span>
+                          <AccordionTrigger className="text-gray-500 hover:text-gray-300 text-xs py-1 justify-center hover:no-underline transition-colors duration-200 [&>svg]:animate-bounce-subtle">
+                            {/* The default chevron from shadcn/ui's AccordionTrigger is used here */}
                           </AccordionTrigger>
                           <AccordionContent className="accordion-content text-gray-400 text-sm pt-3">
                             <ul className="space-y-2 sm:space-y-3">

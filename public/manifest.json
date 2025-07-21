@@ -1,11 +1,11 @@
 {
-  "name": "Ariel Onnis - QA Engineer Portfolio",
-  "short_name": "Ariel Onnis",
-  "description": "Professional portfolio of Ariel Onnis - QA Engineer & CSM",
+  "name": "Ariel Onnis Portfolio",
+  "short_name": "Ariel Portfolio",
+  "description": "Ariel Onnis's professional portfolio showcasing QA, CSM, and legal expertise.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111827",
-  "theme_color": "#1f2937",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -15,7 +15,12 @@
     {
       "src": "/favicon.png",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ]
 }
