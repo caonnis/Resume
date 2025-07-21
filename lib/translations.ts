@@ -9,7 +9,6 @@ export const translations = {
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
       github: "GitHub",
-      downloadCv: "Download CV",
     },
     sections: {
       professionalExperience: "Professional Experience",
@@ -194,7 +193,6 @@ export const translations = {
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
       github: "GitHub",
-      downloadCv: "Descargar CV",
     },
     sections: {
       professionalExperience: "Experiencia Profesional",

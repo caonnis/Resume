@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Linkedin, Phone, Github, Globe, Menu, CheckCircle, Clock, Download } from "lucide-react" // Added Download icon
+import { Mail, Linkedin, Phone, Github, Globe, Menu, CheckCircle, Clock } from "lucide-react" // Added Download icon
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -117,15 +117,6 @@ export default function Portfolio() {
             >
               <Github className="w-4 h-4" />
               <span className="text-sm sm:text-base">{t.socialLinks.github}</span>
-            </a>
-            {/* CV Download Button */}
-            <a
-              href="/ariel-onnis-cv.pdf"
-              download="Ariel_Onnis_CV.pdf"
-              className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 sm:px-4 sm:py-2 rounded-lg transition-colors"
-            >
-              <Download className="w-4 h-4" />
-              <span className="text-sm sm:text-base">{t.socialLinks.downloadCv}</span>
             </a>
           </div>
         </div>
