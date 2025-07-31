@@ -73,6 +73,15 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TR3C5Q3C9J"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TR3C5Q3C9J');
+          `}
+        </script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
