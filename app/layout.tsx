@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Ariel Onnis - QA Engineer & CSM® | Lawyer",
+    title: "Ariel Onnis - IoT QA Engineer & CSM | Data Driven | Lawyer",
     description:
       "Experienced QA Engineer and Certified ScrumMaster with expertise in IoT testing, healthcare compliance, and data governance.",
     url: "https://arielonnis.com",
