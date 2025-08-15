@@ -91,7 +91,7 @@ export default function Portfolio() {
           {/* Social Links */}
           <div className="flex flex-row flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4 print-hidden">
             <a
-              href="mailto:ariel@example.com"
+              href="mailto:arielonnis@gmail.com"
               className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 sm:px-4 sm:py-2 rounded-lg transition-colors"
             >
               <Mail className="w-4 h-4" />
