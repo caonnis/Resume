@@ -105,7 +105,7 @@ export default function Portfolio() {
               <span className="text-sm sm:text-base">{t.socialLinks.linkedin}</span>
             </a>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/5491161179711"
               className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 sm:px-4 sm:py-2 rounded-lg transition-colors"
             >
               <Phone className="w-4 h-4" />
